@@ -5,7 +5,26 @@ metadata:
   annotations:
     nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
-  defaultBackend:
+#    - host: string
+#      http:
+#        paths:
+#          - backend:
+#              resource:
+#                apiGroup: string
+#                kind: string
+#                name: string
+#              service:
+#                name: string
+#                port:
+#                  name: string
+#                  number: int
+#            path: string
+#            pathType: string
+  tls:
+#    - hosts:
+#        - string
+#      secretName: string
+  backend:
     service:
       name: frontend
       port:
@@ -27,24 +46,3 @@ spec:
                   number: 80
             path: /
             pathType: Prefix
-#    - host: string
-#      http:
-#        paths:
-#          - backend:
-#              resource:
-#                apiGroup: string
-#                kind: string
-#                name: string
-#              service:
-#                name: string
-#                port:
-#                  name: string
-#                  number: int
-#            path: string
-#            pathType: string
-  tls:
-#    - hosts:
-#        - string
-#      secretName: string
-  backend:
-    {}
