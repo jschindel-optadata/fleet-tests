@@ -5,35 +5,6 @@ metadata:
   annotations:
     nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
-#    - host: string
-#      http:
-#        paths:
-#          - backend:
-#              resource:
-#                apiGroup: string
-#                kind: string
-#                name: string
-#              service:
-#                name: string
-#                port:
-#                  name: string
-#                  number: int
-#            path: string
-#            pathType: string
-  tls:
-#    - hosts:
-#        - string
-#      secretName: string
-  backend:
-    service:
-      name: frontend
-      port:
-        number: 80
-#        name: string
-#    resource:
-#      apiGroup: string
-#      kind: string
-#      name: string
   ingressClassName: nginx
   rules:
     - host: testapp.optadata.de
